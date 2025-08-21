@@ -3,173 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant KI-Agent - Beta-Programm</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Handwerker Leads - Garantiert mehr Kundenanfragen</title>
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .hero-bg {
-            background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
-            background-size: cover;
-            background-position: center;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #2c3e50; color: white; padding: 1rem 0; }
+        .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 80px 0; text-align: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.5rem; margin-bottom: 30px; }
+        .cta-button { display: inline-block; background: #f39c12; color: white; padding: 15px 40px; text-decoration: none; border-radius: 5px; font-size: 1.2rem; transition: 0.3s; }
+        .cta-button:hover { background: #e67e22; transform: translateY(-2px); }
+        .features { padding: 80px 0; background: #f8f9fa; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .feature { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .feature h3 { color: #2c3e50; margin-bottom: 15px; }
+        .form-section { padding: 80px 0; background: white; }
+        .form-container { max-width: 600px; margin: 0 auto; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px; }
+        .submit-btn { width: 100%; padding: 15px; background: #27ae60; color: white; border: none; border-radius: 5px; font-size: 1.2rem; cursor: pointer; transition: 0.3s; }
+        .submit-btn:hover { background: #229954; }
+        footer { background: #2c3e50; color: white; text-align: center; padding: 20px 0; }
     </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-50">
-
-    <!-- Header -->
-    <header class="bg-white shadow-sm">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-gray-800">Restaurant KI-Agent</div>
-            <a href="#beta-form" class="bg-orange-500 text-white font-semibold px-4 py-2 rounded-lg hover:bg-orange-600 transition duration-300">Jetzt Beta-Tester werden</a>
+<body>
+    <header>
+        <div class="container">
+            <h2>HandwerkerLeads.de</h2>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-bg text-white">
-        <div class="bg-black bg-opacity-60 py-20">
-            <div class="container mx-auto px-6 text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">Automatisieren Sie Ihr Restaurant-Marketing mit KI</h1>
-                <p class="text-lg md:text-xl mb-8">Werden Sie einer von 10 exklusiven Beta-Testern und erhalten Sie 50% Rabatt für 3 Monate.</p>
-                <a href="#beta-form" class="bg-orange-500 text-white font-bold px-8 py-4 rounded-full hover:bg-orange-600 transition duration-300 text-lg">Jetzt bewerben</a>
-            </div>
+    <section class="hero">
+        <div class="container">
+            <h1>Garantiert 10+ Kundenanfragen pro Monat</h1>
+            <p>Für Dachdecker, Maler & Elektriker in Hamburg</p>
+            <a href="#form" class="cta-button">Jetzt Anfragen erhalten →</a>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Was unser KI-Agent für Sie erledigt</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Feature 1 -->
-                <div class="text-center p-6 border rounded-lg shadow-lg bg-gray-50">
-                    <div class="text-orange-500 mb-4">
-                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Social Media Posts</h3>
-                    <p class="text-gray-600">Täglich neue, ansprechende Posts für Facebook, Instagram & Co.</p>
+    <section class="features">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">Wie es funktioniert</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <h3>1. Wir schalten Werbung</h3>
+                    <p>Professionelle Google Ads Kampagnen, die genau Ihre Zielkunden ansprechen.</p>
                 </div>
-                <!-- Feature 2 -->
-                <div class="text-center p-6 border rounded-lg shadow-lg bg-gray-50">
-                    <div class="text-orange-500 mb-4">
-                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Newsletter</h3>
-                    <p class="text-gray-600">Wöchentliche Newsletter mit Angeboten und Events.</p>
+                <div class="feature">
+                    <h3>2. Kunden rufen Sie an</h3>
+                    <p>Qualifizierte Interessenten melden sich direkt bei Ihnen.</p>
                 </div>
-                <!-- Feature 3 -->
-                <div class="text-center p-6 border rounded-lg shadow-lg bg-gray-50">
-                    <div class="text-orange-500 mb-4">
-                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Menü-Optimierung</h3>
-                    <p class="text-gray-600">Appetitliche Beschreibungen, die Ihre Gerichte verkaufen.</p>
-                </div>
-                <!-- Feature 4 -->
-                <div class="text-center p-6 border rounded-lg shadow-lg bg-gray-50">
-                    <div class="text-orange-500 mb-4">
-                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.196-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L2.05 10.1c-.783-.57-.38-1.81.588-1.81h4.914a1 1 0 00.95-.69L11.049 2.927z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Bewertungs-Antworten</h3>
-                    <p class="text-gray-600">Professionelle Antworten auf Google & TripAdvisor Bewertungen.</p>
+                <div class="feature">
+                    <h3>3. Sie schließen Aufträge ab</h3>
+                    <p>Konzentrieren Sie sich auf Ihre Arbeit, wir bringen die Kunden.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How it works -->
-    <section class="py-16">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">So einfach funktioniert es</h2>
-            <div class="flex flex-col md:flex-row items-center justify-center gap-8">
-                <div class="md:w-1/2">
-                    <div class="p-6 border rounded-lg shadow-lg bg-white">
-                        <h3 class="text-2xl font-bold mb-4">Live-Demo des Dashboards</h3>
-                        <p class="text-gray-600 mb-4">Hier wird eine interaktive Demo oder ein Video des Dashboards eingebettet.</p>
-                        <div class="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg flex items-center justify-center">
-                            <p class="text-gray-500">[Live Demo / Video Placeholder]</p>
-                        </div>
+    <section class="form-section" id="form">
+        <div class="container">
+            <div class="form-container">
+                <h2 style="text-align: center; margin-bottom: 30px;">Kostenlose Beratung anfordern</h2>
+                <form id="leadForm">
+                    <div class="form-group">
+                        <label>Ihr Name</label>
+                        <input type="text" name="name" required>
                     </div>
-                </div>
-                <div class="md:w-1/2">
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 h-10 w-10 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-xl">1</div>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-bold">Anmelden & Konfigurieren</h4>
-                                <p class="text-gray-600">Geben Sie einmalig Ihre Restaurant-Daten ein.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 h-10 w-10 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-xl">2</div>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-bold">KI generiert Inhalte</h4>
-                                <p class="text-gray-600">Unser Agent erstellt täglich neue Inhalte für Sie.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 h-10 w-10 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-xl">3</div>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-bold">Überprüfen & Veröffentlichen</h4>
-                                <p class="text-gray-600">Sie geben die Inhalte mit einem Klick frei.</p>
-                            </div>
-                        </div>
+                    <div class="form-group">
+                        <label>Telefonnummer</label>
+                        <input type="tel" name="telefon" required>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Beta Program Form -->
-    <section id="beta-form" class="py-16 bg-orange-100">
-        <div class="container mx-auto px-6">
-            <div class="max-w-2xl mx-auto text-center">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Bewerben Sie sich für das Beta-Programm</h2>
-                <p class="text-gray-600 mb-8">Sichern Sie sich Ihren Platz als einer von 10 exklusiven Testern und profitieren Sie von 50% Rabatt für 3 Monate. Füllen Sie einfach das Formular aus und wir melden uns bei Ihnen.</p>
-            </div>
-            <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-                <form>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                        <div>
-                            <label for="name" class="block text-gray-700 font-semibold mb-2">Ihr Name</label>
-                            <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required>
-                        </div>
-                        <div>
-                            <label for="email" class="block text-gray-700 font-semibold mb-2">E-Mail Adresse</label>
-                            <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required>
-                        </div>
+                    <div class="form-group">
+                        <label>Ihr Gewerk</label>
+                        <select name="gewerk" required>
+                            <option value="">Bitte wählen...</option>
+                            <option value="dachdecker">Dachdecker</option>
+                            <option value="maler">Maler</option>
+                            <option value="elektriker">Elektriker</option>
+                            <option value="andere">Andere</option>
+                        </select>
                     </div>
-                    <div class="mb-6">
-                        <label for="restaurant-name" class="block text-gray-700 font-semibold mb-2">Restaurant Name</label>
-                        <input type="text" id="restaurant-name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required>
+                    <div class="form-group">
+                        <label>Stadt</label>
+                        <input type="text" name="stadt" value="Hamburg" required>
                     </div>
-                    <div class="mb-6">
-                        <label for="website" class="block text-gray-700 font-semibold mb-2">Restaurant Webseite (optional)</label>
-                        <input type="url" id="website" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
-                    </div>
-                    <div class="mb-6">
-                        <label for="message" class="block text-gray-700 font-semibold mb-2">Warum möchten Sie teilnehmen?</label>
-                        <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required></textarea>
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" class="bg-orange-500 text-white font-bold px-8 py-3 rounded-full hover:bg-orange-600 transition duration-300 text-lg">Bewerbung absenden</button>
-                    </div>
+                    <button type="submit" class="submit-btn">Jetzt kostenlose Beratung sichern</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2025 Restaurant KI-Agent. Alle Rechte vorbehalten.</p>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 HandwerkerLeads.de | Impressum | Datenschutz</p>
         </div>
     </footer>
 
+    <script>
+        document.getElementById('leadForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            
+            try {
+                const response = await fetch('https://restaurant-ki-agent-api.herokuapp.com/api/lead', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(data)
+                });
+                
+                if(response.ok) {
+                    alert('Vielen Dank! Wir melden uns innerhalb von 24 Stunden bei Ihnen.');
+                    e.target.reset();
+                }
+            } catch(error) {
+                alert('Bitte versuchen Sie es später erneut oder rufen Sie uns direkt an.');
+            }
+        });
+    </script>
 </body>
 </html>
-
